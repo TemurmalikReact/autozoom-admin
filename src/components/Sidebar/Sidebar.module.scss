@@ -1,0 +1,122 @@
+.sidebar {
+    position: relative;
+    z-index: 20;
+    height: 100vh;
+    background-color: #001529;
+    transition: all 0.5s ease;
+
+    width: 320px; 
+
+    &__collapsed {
+        width: 80px;
+
+        .sidebar__logo__img {
+            display: block;
+        }
+
+        .sidebar__logo__text {
+            display: none;
+        }
+
+        .sidebar__menu_item {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+            &__title {
+                display: none;
+            }
+        }
+    }
+
+    &__logo {
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 80px;
+
+        &.none {
+            cursor: context-menu;
+        }
+
+        &__text {
+            color: #a6adb4;
+            font-size: 25px;
+            font-weight: 600;
+            padding-left: 15px;
+            white-space: nowrap; 
+            overflow: hidden;
+            margin: 0;
+            margin-bottom: 12px;
+        }
+        
+        &__img {
+            width: 80px;
+            padding: 0 10px;
+            display: none;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__menu_item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        color: #fff;
+        transition: color 0.3s;
+        gap: 15px;
+
+        &:hover {
+            color: #1890ff;
+
+            .sidebar__menu_item__icon {
+                svg {
+                    color: #1890ff;
+                    fill: #1890ff;
+                    
+                    path {
+                        fill: #1890ff;
+                        color: #1890ff;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            background-color: #1890ff;
+            color: #fff;
+            cursor: context-menu;
+
+            .sidebar__menu_item__icon {
+                svg {
+                    color: #fff;
+                    fill: #fff;
+                    
+                    path {
+                        fill: #fff;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        &__icon {
+            font-size: 20px;
+            width: 20px;
+
+            svg {
+                color: #fff;
+                fill: #fff;
+                
+                path {
+                    fill: #fff;
+                    color: #fff;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+}
